@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Merriweather&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(180deg, #f7f1e3, #E7C998, #E7C998, #513A1A, #424925) ;
+    color: #5C5F0C;
+    font-family: 'Merriweather', serif;
+    margin: 0;
+}
+
+header {
+    background-image: url('train.jpg');
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 70vh;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+    /*text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1), 0px 18px 23px rgba(0, 0, 0, 0.1);*/
+    text-align: center;
+    margin: 5rem;
+    font-family: 'Lora', serif;
+    font-size: 40px;
+    color: #f7f1e3;
+}
+
+h2.error {
+    color: #f7f1e3;
+    text-align: center;
+}
+
+.search {
+    display: flex;
+    flex-direction: row;
+    align-items: space-around;
+    justify-content: center;
+    height: 50px;
+    margin: 3rem;
+}
+
+.input {
+    background-color: #f7f1e3;
+    border: 0;
+    font-size: 18px;
+    padding: 15px;
+    height: 50px;
+    width: 50vw;
+    border-radius: 5px 0 0 5px;  
+}
+
+.btn {
+    background-color: #f7f1e3;
+    border: 0;
+    /*cursor: pointer; */
+    font-size: 24px;
+    height: 50px;
+    width: 50px;
+    border-radius: 0 5px 5px 0;
+}
+/*
+.btn:focus, .input:focus {
+    outline: none;
+}
+
+.search.active .input {
+    width: 50vw;
+}
+
+.search.active .btn {
+    transform: translateX(275px);
+} */
+
+.blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 500vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 2;
+}
+
+.hide {
+    display: none;
+}
+
+.result-wrapper {
+    width: 80vw;
+}
+
+.result {
+    padding-inline-start: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 20px;
+    }
+
+    .character {
+        z-index: 1;
+        list-style-type: none;
+        box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.2);
+        background-color: #f7f1e3;
+        border-radius: 10px;
+        padding: 10px 20px;
+        cursor: url(wand.gif),auto;
+        display: grid;
+        max-width: 30vw;
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: repeat(6 1fr);
+        grid-template-areas:
+            'name image'
+            'house image'
+            'species image'
+            'ancestry image'
+            'wand image'
+            'patronus image'
+            'actor image';
+        text-align: left;
+    }
+
+    .character.active {
+        transform: scale(1.5);
+        z-index: 3;
+    }
+    
+    .character > h2 {
+        grid-area: name;
+        margin-bottom: 0px;
+    }
+    
+    .character > p.house {
+        grid-area: house;
+        margin: 0;
+    }
+    
+    .character > img {
+        max-height: 150px;
+        grid-area: image;
+        margin-top: 1rem;
+        margin-left: 0.5rem;
+        border-radius: 5px;
+    }
+
+    .character > p.species {
+        grid-area: species;
+        margin: 0;
+    }
+    
+    .character > p.ancestry {
+        grid-area: ancestry;
+        margin: 0;
+    }
+
+    .character > p.wand {
+        grid-area: wand;
+        margin: 0;
+    }
+
+    .character > p.patronus {
+        grid-area: patronus;
+        margin: 0;
+    }
+
+    .character > p.actor {
+        grid-area: actor;
+        margin: 0;
+    }
+
+    footer {
+        color: #f7f1e3;
+        height: 15vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media screen and (min-width: 1024px) {
+        header {
+            background-image: url('train2.jpg');
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        .character {
+            max-width: 80vw;
+        }
+
+        header {
+            background-position: 20% 30%;
+        }
+
+        .character > img {
+            max-height: 100px;
+        }
+
+        h1 {
+            font-size: 35px;
+            margin: 1rem;
+        }
+    }
+
+    
