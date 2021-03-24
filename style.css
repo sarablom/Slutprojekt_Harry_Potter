@@ -1,3 +1,5 @@
+/*Universal*/
+
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@700&family=Merriweather&display=swap');
 
 * {
@@ -41,6 +43,7 @@ h2.error {
     text-align: center;
 }
 
+/*Search bar*/
 .search {
     display: flex;
     flex-direction: row;
@@ -63,25 +66,13 @@ h2.error {
 .btn {
     background-color: #f7f1e3;
     border: 0;
-    /*cursor: pointer; */
     font-size: 24px;
     height: 50px;
     width: 50px;
     border-radius: 0 5px 5px 0;
 }
-/*
-.btn:focus, .input:focus {
-    outline: none;
-}
 
-.search.active .input {
-    width: 50vw;
-}
-
-.search.active .btn {
-    transform: translateX(275px);
-} */
-
+/*Blurry background when character card activates*/
 .blur {
     position: absolute;
     top: 0;
@@ -96,6 +87,8 @@ h2.error {
 .hide {
     display: none;
 }
+
+/*Result part*/
 
 .result-wrapper {
     width: 80vw;
@@ -179,6 +172,8 @@ h2.error {
         margin: 0;
     }
 
+    /*Footer*/
+
     footer {
         color: #f7f1e3;
         height: 15vh;
@@ -186,6 +181,8 @@ h2.error {
         justify-content: center;
         align-items: center;
     }
+
+    /*Responsive*/
 
     @media screen and (min-width: 1024px) {
         header {
@@ -213,6 +210,10 @@ h2.error {
         h1 {
             font-size: 35px;
             margin: 1rem;
+        }
+
+        .character.active {
+            transform: scale(1.1);
         }
     }
 
