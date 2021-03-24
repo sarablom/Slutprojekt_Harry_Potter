@@ -19,7 +19,7 @@ input.addEventListener('keyup', (e) => { //När användarens tangenttryck är kl
             character.species.toLowerCase().includes(searchString) ||
             character.ancestry.toLowerCase().includes(searchString) ||
             character.patronus.toLowerCase().includes(searchString) ||
-            character.wand.toLowerCase().includes(searchString) ||
+            character.wand.wood.toLowerCase().includes(searchString) ||
             character.actor.toLowerCase().includes(searchString) 
         );
     });
